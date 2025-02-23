@@ -1,0 +1,158 @@
+.breakfast-dashboard-container {
+    background-color: transparent;
+    backdrop-filter: blur(8px) saturate(180%);
+    color: rgb(0, 0, 0);
+    width: 47%;
+    max-height: 70vh;
+    margin-left: 80px;
+    font-family: sans-serif;
+    padding: 60px;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    animation: breakfast-slide-in 1.5s ease-in-out;
+    gap: 40px;
+  }
+  
+  #dbba {
+    display: flex;
+  }
+  
+  #intake {
+    display: flex;
+    align-items: center;
+  }
+  
+  #breakfast-summary-section {
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    width: 50%;
+  }
+  
+  breakfast-summary-card {
+    gap: 40px;
+  }
+  
+  #breakfast-image-section {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    overflow: hidden;
+    width: 50%;
+  }
+  
+  #breakfast-display-image {
+    height: 500px;
+    width: 500px;
+    animation: breakfast-image-slide-in 1.5s ease-in-out;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(6px 11px 5px #222);
+  }
+  
+  .breakfast-chart-area {
+    background-color: rgb(38, 38, 38);
+    padding: 20px;
+    border-radius: 40px;
+    min-height: 300px;
+    margin-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  p {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @keyframes breakfast-slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes breakfast-image-slide-in {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 1024px) {
+    .breakfast-dashboard-container {
+      width: 90%;
+      margin-left: 5%;
+      padding: 30px;
+      flex-direction: column;
+      max-height: none;
+    }
+  
+    #dbba {
+      flex-direction: column;
+    }
+  
+    #breakfast-summary-section,
+    #breakfast-image-section {
+      width: 100%;
+    }
+  
+    #breakfast-image-section {
+      gap: 20px;
+    }
+  
+    #breakfast-display-image {
+      height: 400px;
+      width: 400px;
+    }
+  
+    .breakfast-chart-area {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .breakfast-dashboard-container {
+      padding: 20px;
+    }
+  
+    #breakfast-display-image {
+      height: 300px;
+      width: 300px;
+    }
+  
+    .breakfast-chart-area {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breakfast-dashboard-container {
+      padding: 15px;
+      height: 70vh;
+    }
+    #intake{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+  
+    #breakfast-display-image {
+      height: 200px;
+      width: 200px;
+    }
+  
+    .breakfast-chart-area {
+      padding: 10px;
+      min-height: 200px;
+    }
+  }
